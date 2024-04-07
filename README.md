@@ -8,6 +8,15 @@ This project facilitates YOLOv8 classification on custom datasets, covering the 
 - Training YOLOv8 model for classification.
 - Performing inference on test data.
 
+## Folder Structure:
+- `Classification-Automation`
+  - `cls-data`
+  - `Data`
+  - `detection_data`
+  - `model_folder`
+  - `output_video`
+  - `test_video` 
+
 ## Step 1: Logging into the Server
 1. Open Visual Studio Code (VS Code).
 2. Open the Command Palette with "Ctrl+Shift+P."
