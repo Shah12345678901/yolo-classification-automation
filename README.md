@@ -33,17 +33,17 @@ This project facilitates YOLOv8 classification on custom datasets, covering the 
 ## Step 3: Running YOLOv8 Classification
 ```bash
 ### If you have detection format data and detector model trained on it:
-python3 main.py --start_data_preparation --crop_by_detector --det_model_path /home/shahzeb/classifiaction-Automation/model_folder/best.pt --image_folder /home/shahzeb/classifiaction-Automation/detection_data/images --destination_folder /home/shahzeb/classifiaction-Automation/Data --classes 0 1 --split_data --train_folder /home/shahzeb/classifiaction-Automation/cls-data/train --val_folder /home/shahzeb/classifiaction-Automation/cls-data/val --split_ratio 0.7 --train_yolo --data_dir /home/shahzeb/classifiaction-Automation/cls-data --epochs 1 --model yolov8n-cls.pt --inference --video_path /home/shahzeb/classifiaction-Automation/test_video/test.mp4 --output_video_path /home/shahzeb/classifiaction-Automation/output_video/1.mp4 --data_folder /home/shahzeb/classifiaction-Automation/Data
+python3 main.py --start_data_preparation --crop_by_detector --det_model_path model_folder/best.pt --image_folder detection_data/images --destination_folder Data --classes 0 1 --split_data --train_folder cls-data/train --val_folder cls-data/val --split_ratio 0.7 --train_yolo --data_dir cls-data --epochs 1 --model yolov8n-cls.pt --inference --video_path test_video/test.mp4 --output_video_path output_video/1.mp4 --data_folder Data
 
 
 ### If you have detection format data and want to crop by using the labels file:
 ```bash
-python3 main.py --start_data_preparation --crop_by_labels --image_folder /home/shahzeb/classifiaction-Automation/detection_data/images --label_folder /home/shahzeb/classifiaction-Automation/detection_data/labels --output_folder /home/shahzeb/classifiaction-Automation/Data --split_data --data_folder /home/shahzeb/classifiaction-Automation/Data --train_folder /home/shahzeb/classifiaction-Automation/cls-data/train --val_folder /home/shahzeb/classifiaction-Automation/cls-data/val --split_ratio 0.7 --train_yolo --data_dir /home/shahzeb/classifiaction-Automation/cls-data --epochs 1 --model yolov8n-cls.pt --inference --video_path /home/shahzeb/classifiaction-Automation/test_video/test.mp4 --output_video_path /home/shahzeb/classifiaction-Automation/output_video --det_model_path /home/shahzeb/classifiaction-Automation/model_folder/best.pt
+python3 main.py --start_data_preparation --crop_by_labels --image_folder detection_data/images --label_folder detection_data/labels --output_folder Data --split_data --data_folder Data --train_folder cls-data/train --val_folder cls-data/val --split_ratio 0.7 --train_yolo --data_dir cls-data --epochs 1 --model yolov8n-cls.pt --inference --video_path test_video/test.mp4 --output_video_path output_video --det_model_path model_folder/best.pt
 
 
 ### If you already have prepared data for classification:
 ```bash
-python3 main.py --train_yolo --data_dir /home/shahzeb/classifiaction-Automation/cls-data --epochs 10 --model yolov8n-cls.pt --inference --video_path /home/shahzeb/classifiaction-Automation/test_video --output_video_path /home/shahzeb/classifiaction-Automation/output_video --det_model_path /home/shahzeb/classifiaction-Automation/model_folder/best.pt
+python3 main.py --train_yolo --data_dir cls-data --epochs 10 --model yolov8n-cls.pt --inference --video_path test_video --output_video_path output_video --det_model_path model_folder/best.pt
 
 
 
